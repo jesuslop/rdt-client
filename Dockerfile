@@ -100,5 +100,3 @@ EXPOSE 6500
 ENTRYPOINT ["/usr/share/dotnet/dotnet", "/app/RdtClient.Web.dll"]
 
 
-# Check Status
-HEALTHCHECK --interval=30s --timeout=30s --start-period=300s --retries=3 CMD curl --fail http://localhost:6500 || exit 
