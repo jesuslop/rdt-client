@@ -38,7 +38,8 @@ RUN \
    dotnet restore --no-cache RdtClient.sln && dotnet publish --no-restore -c Release -o out ; 
 
 # Stage 3 - Build runtime image
-FROM alpine:3.20
+#FROM alpine:3.20
+FROM crazymax/alpine-s6
 
 ARG TARGETPLATFORM
 ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/arm/v7}
